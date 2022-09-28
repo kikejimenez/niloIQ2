@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "niloIQ2"
+  site-url: "https://kikejimenez.github.io/niloIQ2"
+  description: "Forecast Grain Prices"
+  repo-branch: master
+  repo-url: "https://github.com/kikejimenez/niloIQ2"

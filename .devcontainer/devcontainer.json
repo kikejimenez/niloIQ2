@@ -1,0 +1,31 @@
+{
+    "name": "niloIQ",
+    "dockerFile": "Dockerfile/Dockerfile",
+    // "image": "ejimenezr/plotly-darts-merlion:nbdev2",
+    "runArgs": [
+        "--env-file",
+        ".env"
+    ],
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ],
+            "settings": {
+                "python.linting.enabled": true,
+                "python.linting.pylintPath": "/opt/conda/bin/pylint",
+                "editor.formatOnSave": true,
+                "python.formatting.provider": "yapf", // or "black" here
+                "python.linting.pylintEnabled": true,
+                "python.formatting.yapfPath": "/opt/conda/bin/yapf",
+                "python.formatting.yapfArgs": [
+                    "--style={based_on_style: pep8, indent_width: 4}"
+                ]
+            }
+        }
+    }
+}
