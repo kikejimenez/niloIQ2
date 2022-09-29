@@ -1,0 +1,152 @@
+{
+    "cells": [
+        {
+            "cell_type": "code",
+            "execution_count": 2,
+            "id": "important-grill",
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# default_exp load_data"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "id": "intelligent-climate",
+            "metadata": {
+                "tags": []
+            },
+            "source": [
+                "## Loading Data"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 8,
+            "id": "metallic-russia",
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# export \n",
+                "\n",
+                "from pathlib import Path\n",
+                "import pandas as pd"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 12,
+            "id": "searching-wrong",
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# export\n",
+                "class Data:\n",
+                "\n",
+                "    def __init__(data_path: str):\n",
+                "\n",
+                "        self.data_path = data_path\n",
+                "\n",
+                "        self.sales = load_data('sales')\n",
+                "        self.stores = load_data('stores')\n",
+                "        self.geograph = load_data('geographic')\n",
+                "        self.opening = load_data('opening')\n",
+                "        self.macro = load_data('macro')\n",
+                "        self.inflation = load_data('inflation')\n",
+                "        self.weather = load_data('weather')\n",
+                "        self.visitor = load_data('visitors')\n",
+                "\n",
+                "    def load_data(self, name: str) -> pd.DataFrame:\n",
+                "        filename = f\"{name}_nilo_iq_forecasts.parquet\"\n",
+                "        filename = Path.joinpath(self.data_path, filename)\n",
+                "        df = pd.read_parquet(filename)\n",
+                "        df.Date = pd.to_datetime(sales.Date)\n",
+                "        \n",
+                "    def opening_markdown(self,):\n",
+                "        ...\n",
+                "\n",
+                "    def closing_markdown(self,):\n",
+                "        \n",
+                "        return "
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "id": "appreciated-swimming",
+            "metadata": {},
+            "source": [
+                "##%% closing \n",
+                "\n",
+                " The following information has been loaded:\n",
+                "        \n",
+                "\n",
+                "- `sales`:  Information for nilo_iq_forecasts stores\n",
+                "- `stores`:  Detailed information for the stores in the reported sales\n",
+                "- `geograph`:  Detailed information for the location of the stores in the reported sales\n",
+                "- `opening`:  Detailed information for the opening and closing times of the stores in the reported sale\n",
+                "- `macro`:  CPI and RPI history for the timeframe in the reported sales in Germany\n",
+                "- `inflation`:  Inflation history for the timeframe in the reported sales in Germany\n",
+                "- `weather`:  Weather history for the timeframe in the reported sales in Germany by State\n",
+                "- `visitor`: Number of visitors of each store estimated values"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 3,
+            "id": "polyphonic-bobby",
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# sales information for nilo_iq_forecasts stores\n",
+                "sales    = pd.read_parquet('data/nilo_iq_forecasts_sales.parquet')\n",
+                "sales.Date = pd.to_datetime(sales.Date)\n",
+                "\n",
+                "# detailed information for the stores in the reported sales\n",
+                "stores   = pd.read_parquet('data/nilo_iq_forecasts_area.parquet')\n",
+                "\n",
+                "# detailed information for the location of the stores in the reported sales\n",
+                "geograph = pd.read_parquet('data/nilo_iq_forecasts_geographic.parquet')\n",
+                "\n",
+                "# detailed information for the opening and closing times of the stores in the reported sales\n",
+                "opening  = pd.read_parquet('data/nilo_iq_forecasts_openning.parquet')\n",
+                "\n",
+                "# CPI and RPI history for the timeframe in the reported sales in Germany\n",
+                "macro = pd.read_parquet('data/nilo_iq_forecasts_macro.parquet')\n",
+                "macro.Date = pd.to_datetime(macro.Date)\n",
+                "\n",
+                "# inflation history for the timeframe in the reported sales in Germany\n",
+                "inflation = pd.read_parquet('data/nilo_iq_forecasts_inflation.parquet')\n",
+                "inflation.Date = pd.to_datetime(inflation.Date)\n",
+                "\n",
+                "# weather history for the timeframe in the reported sales in Germany by State\n",
+                "weather = pd.read_parquet('data/nilo_iq_forecasts_weather.parquet')\n",
+                "weather.Date = pd.to_datetime(weather.Date)\n",
+                "\n",
+                "# number of visitors of each store estimated values\n",
+                "visitor = pd.read_parquet('data/nilo_iq_forecasts_visitors.parquet')\n",
+                "visitor.Date = pd.to_datetime(visitor.Date)"
+            ]
+        }
+    ],
+    "metadata": {
+        "kernelspec": {
+            "display_name": "Python 3",
+            "language": "python",
+            "name": "python3"
+        },
+        "language_info": {
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "file_extension": ".py",
+            "mimetype": "text/x-python",
+            "name": "python",
+            "nbconvert_exporter": "python",
+            "pygments_lexer": "ipython3",
+            "version": "3.8.6"
+        }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 5
+}

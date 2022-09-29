@@ -1,0 +1,241 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_core.ipynb
+      - section: etl
+        contents:
+          - 01_etl/99_Tables.ipynb
+          - section: InternationalPrices
+            contents:
+              - 01_etl/00_InternationalPrices/01_LoadData.ipynb
+      - section: etl
+        contents:
+          - section: InternationalPrices
+            contents:
+              - 01_etl/00_InternationalPrices/02_Datetime.ipynb
+      - section: etl
+        contents:
+          - section: InternationalPrices
+            contents:
+              - 01_etl/00_InternationalPrices/03_RowTransformations.ipynb
+      - section: etl
+        contents:
+          - section: InternationalPrices
+            contents:
+              - 01_etl/00_InternationalPrices/04_GroupAndResample.ipynb
+      - section: etl
+        contents:
+          - section: InternationalPrices
+            contents:
+              - 01_etl/00_InternationalPrices/99_SweetVizProfiling.ipynb
+      - section: etl
+        contents:
+          - section: NationalPrices
+            contents:
+              - 01_etl/00_NationalPrices/01_LoadData.ipynb
+      - section: etl
+        contents:
+          - section: NationalPrices
+            contents:
+              - 01_etl/00_NationalPrices/02_Datetime.ipynb
+      - section: etl
+        contents:
+          - section: NationalPrices
+            contents:
+              - 01_etl/00_NationalPrices/03_RowTransformations.ipynb
+      - section: etl
+        contents:
+          - section: NationalPrices
+            contents:
+              - 01_etl/00_NationalPrices/04_GroupAndResample.ipynb
+      - section: etl
+        contents:
+          - section: NationalPrices
+            contents:
+              - 01_etl/00_NationalPrices/98_DateRange.ipynb
+      - section: etl
+        contents:
+          - section: NationalPrices
+            contents:
+              - 01_etl/00_NationalPrices/99_SweetVizProfiling.ipynb
+      - section: national
+        contents:
+          - 02_national/98_Tables.ipynb
+          - section: DataPreprocessing
+            contents:
+              - 02_national/01_DataPreprocessing/01_Load.ipynb
+      - section: national
+        contents:
+          - section: DataPreprocessing
+            contents:
+              - 02_national/01_DataPreprocessing/02_DateFeatures.ipynb
+      - section: national
+        contents:
+          - section: EDA
+            contents:
+              - 02_national/02_EDA/03_Correlations.ipynb
+      - section: national
+        contents:
+          - section: EDA
+            contents:
+              - 02_national/02_EDA/04_MissingValues.ipynb
+      - section: national
+        contents:
+          - section: EDA
+            contents:
+              - 02_national/02_EDA/05_PriceAndDateRanges.ipynb
+      - section: national
+        contents:
+          - section: TimeSeries
+            contents:
+              - 02_national/04_TimeSeries/01_SetAndProcess.ipynb
+      - section: national
+        contents:
+          - section: TimeSeries
+            contents:
+              - 02_national/04_TimeSeries/03_TrendSeasonalDecomposition.ipynb
+      - section: national
+        contents:
+          - section: TimeSeries
+            contents:
+              - 02_national/04_TimeSeries/04_SubSeasonal.ipynb
+      - section: national
+        contents:
+          - section: TimeSeries
+            contents:
+              - 02_national/04_TimeSeries/05_UnitRootTests.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: darts
+                contents:
+                  - 02_national/05_Experiments/09_darts/00_Preprocessing.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: darts
+                contents:
+                  - 02_national/05_Experiments/09_darts/01_TrainValidationTestSets.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: darts
+                contents:
+                  - 02_national/05_Experiments/09_darts/02_Model.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: darts
+                contents:
+                  - 02_national/05_Experiments/09_darts/03_Fit.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: darts
+                contents:
+                  - 02_national/05_Experiments/09_darts/05_Predict.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: darts
+                contents:
+                  - 02_national/05_Experiments/09_darts/06_Evaluate.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: darts
+                contents:
+                  - 02_national/05_Experiments/09_darts/07_Results.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: darts
+                contents:
+                  - 02_national/05_Experiments/09_darts/98_Metrics.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/00_FuturePeriods.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/01_DataSplits.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/02_Model.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/03_Training.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/05_Infer.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/06_Evaluate.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/07_Results.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/08_Tracking.ipynb
+      - section: national
+        contents:
+          - section: Experiments
+            contents:
+              - section: merlion
+                contents:
+                  - 02_national/05_Experiments/99_merlion/98_ForecastMetrics.ipynb
+      - section: national
+        contents:
+          - section: util
+            contents:
+              - 02_national/99_util/01_Parser.ipynb
+      - section: national
+        contents:
+          - section: util
+            contents:
+              - 02_national/99_util/02_Constants.ipynb
+      - section: national
+        contents:
+          - section: util
+            contents:
+              - 02_national/99_util/04_SymLinks.ipynb
